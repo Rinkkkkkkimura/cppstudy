@@ -18,10 +18,10 @@ public:
         std::cout << "year:" << year << " month:" << month << " day:" << day << " hour:" << hour << " minute:" << minute <<std::endl;
     }
 
-    //コンストラクタ
+    //引数が3つのときのコンストラクタ
     Date(double year, int month, int day) : year{year}, month{month}, day{day} {}
     
-    //コンストラクタ
+    //引数が5つのときのコンストラクタ
     Date(double year, int month, int day, int hour, int minute) : year{year}, month{month}, day{day}, hour{hour}, minute{minute} {}
 
     
