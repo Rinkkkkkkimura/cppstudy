@@ -2,7 +2,7 @@
 #include <iostream>
 
 Dog::Dog()
-{
+{    
 }
 
 void Dog::speak()
@@ -27,10 +27,6 @@ Cow::Cow()
 void Cow::speak()
 {
     std::cout << "moo" << std::endl;
-}
-
-Animal::Animal()
-{
 }
 
 void Animal::speak()

@@ -3,8 +3,10 @@
 
 class Animal {
 public:
-    Animal();
-    virtual void speak();
+    //Animalは抽象クラスだからコンストラクタいらない
+
+    //純粋仮想関数
+    virtual void speak() = 0;
     
 };
 
