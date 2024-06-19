@@ -16,10 +16,10 @@ int main() {
     }
 
     
-    int current_col = 0, current_row = 1, curr_num = 1, current_x = 0, current_y = 0, current_num = 1;
+    int current_col = 1, current_row = 1, current_x = 0, current_y = 0, current_num = 1;
     
-    while (current_col < m) {
-        
+    while (current_col <= m) {
+        matrix[current_x][current_y] = current_num;
         int next_x = current_x + 1;
         int next_y = current_y - 1;
 
@@ -27,8 +27,8 @@ int main() {
 
             current_x = next_x;
             current_y = next_y;
-            matrix[current_x][current_y] = current_num;
-            current_num++;
+            
+            
 
         } else {
             
@@ -37,7 +37,8 @@ int main() {
             current_y = current_col - 1;
             
         }
-        
+
+        current_num++;
     }
 
     current_col--;
@@ -46,15 +47,15 @@ int main() {
 
     while (current_row < n) {
 
-        
+        matrix[current_x][current_y] = current_num;
         int next_x = current_x + 1;
         int next_y = current_y - 1;
 
-        if (in_range(current_x, current_y, n, m)) {
+        if (in_range(next_x, next_y, n, m)) {
             current_x = next_x;
             current_y = next_y;
-            matrix[current_x][current_y] = current_num;
-            current_num++;
+            
+            
 
         } else {
         
@@ -63,11 +64,9 @@ int main() {
             current_y = current_col - 1;
 
         }
-        
+        current_num++;
     }   
 
-
-    // 출력
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             std::cout << matrix[i][j] << " ";
