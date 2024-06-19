@@ -39,12 +39,15 @@ int main() {
 
                 current_y = next_y;                
 
+            //範囲からはみ出した
             } else {
                 
+                //はみ出した行が奇数番目
                 if(current_row % 2 == 1) {
 
                     current_y = 1;
 
+                //はみ出した行が偶数番目
                 } else {
                     
                     current_y = 0;
